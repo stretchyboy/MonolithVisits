@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ec6be257fa0243d39be4a28d19d7802a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+
+
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+
+</head>
+<body>
+
+            <div class="folium-map" id="map_ec6be257fa0243d39be4a28d19d7802a" ></div>
+
+</body>
+<script>
+
+            var map_ec6be257fa0243d39be4a28d19d7802a = L.map(
+                "map_ec6be257fa0243d39be4a28d19d7802a",
+                {
+                    center: [53.3620621, -1.5036596],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                    title: "Our Map",
+                }
+            );
+
+
+
+
+
+            var tile_layer_d592b7d53904400a81828aaf3a502d58 = L.tileLayer(
+                "https://stamen-tiles-{s}.a.ssl.fastly.net/terrain/{z}/{x}/{y}.jpg",
+                {"attribution": "Map tiles by \u003ca href=\"http://stamen.com\"\u003eStamen Design\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by/3.0\"\u003eCC BY 3.0\u003c/a\u003e. Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://creativecommons.org/licenses/by-sa/3.0\"\u003eCC BY SA\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_ec6be257fa0243d39be4a28d19d7802a);
+
+
+        function geo_json_78b4289648d547128c351c74ae315fd3_onEachFeature(feature, layer) {
+            layer.on({
+                click: function(e) {
+                  //  map_ec6be257fa0243d39be4a28d19d7802a.fitBounds(e.target.getBounds());
+                }
+            });
+        };
+        var geo_json_78b4289648d547128c351c74ae315fd3 = L.geoJson(null, {
+                onEachFeature: geo_json_78b4289648d547128c351c74ae315fd3_onEachFeature,
+
+        }).addTo(map_ec6be257fa0243d39be4a28d19d7802a);
+
+        function geo_json_78b4289648d547128c351c74ae315fd3_add (data) {
+            geo_json_78b4289648d547128c351c74ae315fd3.addData(data);
+        }
+            geo_json_78b4289648d547128c351c74ae315fd3_add({"features": [{"geometry": {"coordinates": [-1.9160158347207, 53.258474699423], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "5", "icon": "tr45", "sid": "8222", "sitetype": "Holy Well or Sacred Spring", "title": "St Ann\u0027s Well (Buxton)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=8222\" target=\"_blank\"\u003eSt Ann\u0027s Well (Buxton)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.73386179483, 53.262432396], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "5", "icon": "tr18", "sid": "14705", "sitetype": "Round Barrow(s)", "title": "Wardlow Hay Cop", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=14705\" target=\"_blank\"\u003eWardlow Hay Cop\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.83067555543, 53.2323167102], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "4", "icon": "tr18", "sid": "13551", "sitetype": "Round Barrow(s)", "title": "Chelmorton Low", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=13551\" target=\"_blank\"\u003eChelmorton Low\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.71846148278, 53.2561947899], "type": "Point"}, "properties": {"acc": "5", "amb": "5", "cond": "4", "icon": "tr18", "sid": "14703", "sitetype": "Round Barrow(s)", "title": "Longstone Moor", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=14703\" target=\"_blank\"\u003eLongstone Moor\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6147766159, 53.2515904649], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "4", "icon": "tr45", "sid": "15172", "sitetype": "Holy Well or Sacred Spring", "title": "Lady Well Wall", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=15172\" target=\"_blank\"\u003eLady Well Wall\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.2299162082225, 53.48343642858], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "4", "icon": "tr44", "sid": "26833", "sitetype": "Sculptured Stone", "title": "St Peter\u0027s Minster (Conisbrough)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=26833\" target=\"_blank\"\u003eSt Peter\u0027s Minster (Conisbrough)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.8145107212761, 53.159482762179], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "4", "icon": "tr45", "sid": "18393", "sitetype": "Holy Well or Sacred Spring", "title": "Lud well (Hartington)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=18393\" target=\"_blank\"\u003eLud well (Hartington)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5369644295773, 53.326154650572], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "4", "icon": "tp45", "sid": "18768", "sitetype": "Holy Well or Sacred Spring", "title": "Peace Well", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=18768\" target=\"_blank\"\u003ePeace Well\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6643939300989, 53.160440146872], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "3", "icon": "tr23", "sid": "126", "sitetype": "Stone Circle", "title": "Nine Stones Close", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=126\" target=\"_blank\"\u003eNine Stones Close\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.8836718929035, 53.301054251006], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "3", "icon": "tr11", "sid": "163", "sitetype": "Henge", "title": "Bullring", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=163\" target=\"_blank\"\u003eBullring\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.7621120923596, 53.169277583788], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "3", "icon": "tr16", "sid": "1734", "sitetype": "Multiple Stone Rows / Avenue", "title": "Arbor Low Earthwork", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=1734\" target=\"_blank\"\u003eArbor Low Earthwork\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.87493024388, 53.3143487056], "type": "Point"}, "properties": {"acc": "5", "amb": "2", "cond": "3", "icon": "tr45", "sid": "11451", "sitetype": "Holy Well or Sacred Spring", "title": "Ebbing and Flowing Well (Chapel)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=11451\" target=\"_blank\"\u003eEbbing and Flowing Well (Chapel)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.82789903238, 53.3270541734], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "3", "icon": "tr18", "sid": "14296", "sitetype": "Round Barrow(s)", "title": "Eldon Hill", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=14296\" target=\"_blank\"\u003eEldon Hill\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.90501566254, 53.4876757997], "type": "Point"}, "properties": {"acc": "5", "amb": "5", "cond": "3", "icon": "tr59", "sid": "14904", "sitetype": "Misc. Earthwork", "title": "Highstones earthwork", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=14904\" target=\"_blank\"\u003eHighstones earthwork\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.7422698140456, 53.347619032925], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "3", "icon": "tr46", "sid": "16724", "sitetype": "Ancient Cross", "title": "St Peter (Hope)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=16724\" target=\"_blank\"\u003eSt Peter (Hope)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5717527603126, 53.567213832128], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "3", "icon": "tr46", "sid": "16751", "sitetype": "Ancient Cross", "title": "All Saints (Cawthorne)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=16751\" target=\"_blank\"\u003eAll Saints (Cawthorne)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6763743867061, 53.192177252137], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "3", "icon": "tr18", "sid": "18232", "sitetype": "Round Barrow(s)", "title": "Haddon Fields Bowl Barrow 2", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=18232\" target=\"_blank\"\u003eHaddon Fields Bowl Barrow 2\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.4700316054394, 53.442495558063], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "3", "icon": "tr46", "sid": "18517", "sitetype": "Ancient Cross", "title": "Ecclesfield", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=18517\" target=\"_blank\"\u003eEcclesfield\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.687030715002, 53.208655377518], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "3", "icon": "tr45", "sid": "18537", "sitetype": "Holy Well or Sacred Spring", "title": "St Peter\u0027s Well (Bakewell)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=18537\" target=\"_blank\"\u003eSt Peter\u0027s Well (Bakewell)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.8004717293141, 53.284405011644], "type": "Point"}, "properties": {"acc": "5", "amb": "4", "cond": "3", "icon": "tr46", "sid": "18541", "sitetype": "Ancient Cross", "title": "Wishing Well", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=18541\" target=\"_blank\"\u003eWishing Well\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.7401706291889, 53.334625854116], "type": "Point"}, "properties": {"acc": "5", "amb": "3", "cond": "3", "icon": "tg45", "sid": "28647", "sitetype": "Holy Well or Sacred Spring", "title": "Bath Spring", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=28647\" target=\"_blank\"\u003eBath Spring\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6295613386567, 53.448489515846], "type": "Point"}, "properties": {"acc": "5", "amb": "0", "cond": "3", "icon": "tr59", "sid": "34468", "sitetype": "Misc. Earthwork", "title": "Bar Dyke (Yorkshire)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=34468\" target=\"_blank\"\u003eBar Dyke (Yorkshire)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.8979073469965, 53.246056086241], "type": "Point"}, "properties": {"acc": "5", "amb": "1", "cond": "2", "icon": "tr59", "sid": "314", "sitetype": "Misc. Earthwork", "title": "Staden Low", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?sid=314\" target=\"_blank\"\u003eStaden Low\u003c/a\u003e"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+
+    let name_getter = 'geo_json_78b4289648d547128c351c74ae315fd3';
+    geo_json_78b4289648d547128c351c74ae315fd3.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["url", "sitetype", "cond", "amb", "acc"];
+    let aliases = ["Site", "Type", "Condition", "Ambience", "Access"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+
+    return div
+    }
+    ,{"className": "foliumpopup", "click": null, "show": true});
+
+
+                var lat_lng_popup_5fd79505f0f649839306d93985abd159 = L.popup();
+                function latLngPop(e) {
+                    lat_lng_popup_5fd79505f0f649839306d93985abd159
+                        .setLatLng(e.latlng)
+                        .setContent("Latitude: " + e.latlng.lat.toFixed(4) +
+                                    "<br>Longitude: " + e.latlng.lng.toFixed(4))
+                        .openOn(map_ec6be257fa0243d39be4a28d19d7802a);
+                    }
+                map_ec6be257fa0243d39be4a28d19d7802a.on('click', latLngPop);
+
+
+            map_ec6be257fa0243d39be4a28d19d7802a.fitBounds(
+                [[53.159482762179, -1.9160158347207], [53.567213832128, -1.2299162082225]],
+                {"padding": [10, 10]}
+            );
+
+</script>
