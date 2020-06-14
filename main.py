@@ -14,6 +14,8 @@ colors = ["red", "blue", "green", "purple", "orange", "darkred",
 radius = 20 #miles
 maxcrowflies = 50
 maxsites = 4
+closestsitetosurrentnext = False
+furthestfirst = True
 
 center = [53.3620621,-1.5036596]# nickys #[53.39064,-1.53328]#mine
 m = folium.Map(
@@ -88,6 +90,8 @@ while len(togroup):
     add the closest to that site until max distance is reached
     '''
     togroup.sort(key=lambda item: item["properties"]["dist"])
+    if furthestfirst:
+        togroup.reverse()
     groupnum += 1
     group = []
     group.append(togroup.pop(0))
@@ -110,6 +114,8 @@ while len(togroup):
         grouped.append(group[-1])
         grouped[-1]["properties"]['group'] = groupnum
         grouped[-1]["properties"]['tripdist'] = currdist
+        if closestsitetosurrentnext:
+            currcoords = grouped[-1]["geometry"]["coordinates"]
 
 
 
