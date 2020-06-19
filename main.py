@@ -20,10 +20,13 @@ furthestfirst = True
 center = [53.3620621,-1.5036596]# nickys #[53.39064,-1.53328]#mine
 m = folium.Map(
     location=center,
-    tiles='Stamen Terrain',
+    tiles='OpenStreetMap', #'Stamen Terrain',
     zoom_start=10,
-    title = "Our Map"
+    title = "Our Map",
+    control_scale = True
     )
+
+folium.map.Layer('Stamen Terrain').add_to(m)
 
 
 sitebase = "http://www.megalithic.co.uk/"
@@ -217,6 +220,7 @@ siteslayer = folium.GeoJson(
 
 m.fit_bounds(m.get_bounds(),padding=(10,10))
 
+folium.map.LayerControl().add_to(m)
 
 
 
