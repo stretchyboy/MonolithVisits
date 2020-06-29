@@ -10,12 +10,23 @@ colors = ["red", "blue", "green", "purple", "orange", "darkred",
     "darkpurple", "white", "pink", "lightblue", "lightgreen",
     "gray", "black", "lightgray"]
 
-
+''' # Original challenge
 radius = 20 #miles
 maxcrowflies = 50
+Access = 5
 maxsites = 4
+'''
+
+radius = 15 #miles
+maxcrowflies = 40
+Access = 4
+maxsites = 5
+
+
+
 closestsitetosurrentnext = False
 furthestfirst = True
+
 
 center = [53.3620621,-1.5036596]# nickys #[53.39064,-1.53328]#mine
 m = folium.Map(
@@ -35,7 +46,20 @@ sites = "le_ajaxmapdata.php?bbox=-2.40875244140625,53.03543290697411,-0.65643310
 site ="megaliths.json" #"https://www.megalithic.co.uk/le_ajaxmapdata.php?bbox=-2.467803955078125,53.15088840824353,-0.597381591796875,53.669866612978275"
 types = {}
 
-done = [18768]
+done = [18768, # Peace Well Dore
+    14705, # Wardlow Hay Cop
+    14703, #  Longstone Moor - Round Barrow(s)
+    15172, # Lady Well Wall - Holy Well or Sacred Spring
+    18537, # St Peter's Well (Bakewell)
+    18232, # Haddon Fields Bowl Barrow 2
+    126,   # Nine Stones Close
+    16724, # St Peter (Hope)
+    34468, # Bar Dyke
+    18517, # Ecclesfield - Ancient Cross - Inaccesible due to COVID-19
+    28647, # Bath Spring - Holy Well  - Inaccesible due to COVID-19
+
+
+    ]
 
 article = "article.php?sid="
 
@@ -47,10 +71,10 @@ icons = "images/mapic/"#tr22.gif
 
 
 def near(item):
-    print(item)
+    #print(item)
     dist =geodesic((center[1],center[0]), item["geometry"]["coordinates"]).miles
     #print(dist)
-    if int(item["properties"]["acc"]) < 5:
+    if int(item["properties"]["acc"]) < Access:
         return False
     if item["properties"]["sitetype"] in ["Museum"]:
         return False
@@ -124,7 +148,7 @@ while len(togroup):
 
     currdist += grouped[-1]["properties"]["dist"]
     grouppoints = [(x["geometry"]["coordinates"][1], x["geometry"]["coordinates"][0]) for x in group]
-    print(grouppoints)
+    #print(grouppoints)
 
     gbase = "https://www.google.com/maps/dir/?"
 
@@ -138,7 +162,7 @@ while len(togroup):
         "waypoints":"|".join([",".join([str(x["geometry"]["coordinates"][1]), str(x["geometry"]["coordinates"][0])]) for x in group]),
         "waypoint_place_ids":"|".join([x["properties"]["title"] for x in group])
     })
-    print(googleparams)
+    #print(googleparams)
     grouppoints.insert(0,center)
     grouppoints.append(center)
     color = colors[(group[-1]["properties"]['group']-1)%len(colors)]
@@ -169,7 +193,7 @@ def sites_function(feature):
 def sites_styles(item):
 
     color = colors[(item['properties']['group']-1)%len(colors)]
-    print(color)
+    #print(color)
     return {
         'fillColor': color
     }
