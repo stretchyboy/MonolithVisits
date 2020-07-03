@@ -15,20 +15,23 @@ radius = 20 #miles
 maxcrowflies = 50
 Access = 5
 maxsites = 4
+furthestfirst = True
+closestsitetosurrentnext = False
 '''
 
 radius = 15 #miles
 maxcrowflies = 40
 Access = 4
 maxsites = 5
+furthestfirst = False
+closestsitetosurrentnext = True
 
 
 
-closestsitetosurrentnext = False
-furthestfirst = True
 
 
-center = [53.3620621,-1.5036596]# nickys #[53.39064,-1.53328]#mine
+
+center = [53.362062,-1.503660]# nickys #[53.39064,-1.53328]#mine
 m = folium.Map(
     location=center,
     tiles='OpenStreetMap', #'Stamen Terrain',
@@ -61,7 +64,7 @@ done = [18768, # Peace Well Dore
 
     ]
 
-article = "article.php?sid="
+article = "article.php?op=savenewvisit&sid="
 
 file=open(site)
 data = json.load(file)
@@ -70,13 +73,45 @@ orglen = len(data["features"])
 icons = "images/mapic/"#tr22.gif
 
 
+def toGraphHopperService(item):
+    return {
+    "name": item["properties"]["title"],
+    "address":{
+        "lon":item["geometry"]["coordinates"][0],
+        "lat":item["geometry"]["coordinates"][1]
+        },
+    "duration":30*60#*1000
+    }
+
+def getVehicle(id):
+    return {
+      "vehicle_id": "camper "+str(id),
+      "type_id":"camper",
+      "start_address": {
+          "location_id": "nicky",
+          "lon": center[1],
+          "lat": center[0]
+      },
+      "end_address": {
+          "location_id": "nicky",
+          "lon": center[1],
+          "lat": center[0]
+      },
+      "earliest_start":13*60*60,
+      #"latest_end":17*60*60
+
+    }
+
+
+
+
 def near(item):
-    #print(item)
+    print(item)
     dist =geodesic((center[1],center[0]), item["geometry"]["coordinates"]).miles
     #print(dist)
     if int(item["properties"]["acc"]) < Access:
         return False
-    if item["properties"]["sitetype"] in ["Museum"]:
+    if item["properties"]["sitetype"] in ["Museum","Modern Stone Circle etc","Natural Stone \/ Erratic \/ Other Natural Feature","Rock Outcrop"]:
         return False
     if int(item["properties"]["sid"]) in done:
         return False
@@ -111,6 +146,8 @@ def processlocal(item):
 groups = []
 grouped = []
 groupnum = 0
+outext = ""
+
 while len(togroup):
     '''
     pop the nearest site
@@ -127,8 +164,11 @@ while len(togroup):
     grouped[-1]["properties"]['group'] = groupnum
     currcoords = group[-1]["geometry"]["coordinates"]
 
-    togroup = [ processlocal(item) for item in togroup ]
 
+
+    togroup = [ processlocal(item) for item in togroup ]
+    outext += str(groupnum) + ":\n"
+    outext += " "+grouped[-1]["properties"]["title"]+ " : " + (",".join([str(grouped[-1]["geometry"]["coordinates"][1]), str(grouped[-1]["geometry"]["coordinates"][0])])) +" : "+sitebase + article + grouped[-1]["properties"]["sid"]+"\n"
     while len(togroup):
         if len(group) >= maxsites:
             break
@@ -141,17 +181,17 @@ while len(togroup):
         grouped.append(group[-1])
         grouped[-1]["properties"]['group'] = groupnum
         grouped[-1]["properties"]['tripdist'] = currdist
+        outext += " "+grouped[-1]["properties"]["title"]+ " : " + (",".join([str(grouped[-1]["geometry"]["coordinates"][1]), str(grouped[-1]["geometry"]["coordinates"][0])])) +" : "+sitebase + article + grouped[-1]["properties"]["sid"]+"\n"
         if closestsitetosurrentnext:
             currcoords = grouped[-1]["geometry"]["coordinates"]
 
 
 
     currdist += grouped[-1]["properties"]["dist"]
-    grouppoints = [(x["geometry"]["coordinates"][1], x["geometry"]["coordinates"][0]) for x in group]
+    grouppoints = [(round(x["geometry"]["coordinates"][1],6), round(x["geometry"]["coordinates"][0],6)) for x in group]
     #print(grouppoints)
 
     gbase = "https://www.google.com/maps/dir/?"
-
     googleparams=urlencode({
         "api":1,
         "origin":",".join([str(num) for num in center]),
@@ -165,10 +205,18 @@ while len(togroup):
     #print(googleparams)
     grouppoints.insert(0,center)
     grouppoints.append(center)
+
+    ghbase = "https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&"
+    #?point=Fairbarn%20Drive%2C%20S6%205QL%2C%20Sheffield%2C%20United%20Kingdom&point=53.343775%2C-1.509204&point=53.343798%2C-1.511809&point=Sycamore%20Court%2C%20S11%209BN%2C%20Sheffield%2C%20United%20Kingdom&locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap
+    graphhopperparams="&".join(["point="+(",".join([str(c) for c in point])) for point in grouppoints])
+
     color = colors[(group[-1]["properties"]['group']-1)%len(colors)]
     text = "Trip: " +str(group[-1]["properties"]['group'])
     text += "  Dist :"+str(round(currdist,1))+ " Miles"
-    text += ' <a target="_blank" href="'+gbase+googleparams+'">Route planner</a>'
+    text += ' <a target="_blank" href="'+gbase+googleparams+'">Google</a>'
+    text += ' <a target="_blank" href="'+ghbase+graphhopperparams+'">Graph Hopper</a>'
+
+
 
     folium.vector_layers.PolyLine(
         grouppoints,
@@ -176,6 +224,18 @@ while len(togroup):
         popup=text,
         color=color
     ).add_to(m)
+
+    request = {
+        "vehicles" : [getVehicle(1)],# for id in range(1,1)],
+        "vehicle_types": [{
+                    "type_id":"camper",
+                    "profile": "car"
+                }],
+        "services": [ toGraphHopperService(item) for item in group],
+    }
+    out_file = open("out"+str(group[-1]["properties"]['group'])+".json", "w")
+    json.dump(request, out_file, indent=2)
+
 
     '''datagroup = data
     datagroup["features"] = group
@@ -250,48 +310,17 @@ folium.map.LayerControl().add_to(m)
 
 
 m.save('index.html')
-
 '''
-
-def toGraphHopperService(item):
-    return {
-    "name": item["properties"]["title"],
-    "address":{
-        "lon":item["geometry"]["coordinates"][1],
-        "lat":item["geometry"]["coordinates"][0]
-        },
-    "duration":30*60*1000
-    }
-
-def getVehicle(id):
-    return {
-      "vehicle_id": "camper "+str(id),
-      "type_id":"camper",
-      "start_address": {
-          "location_id": "nicky's",
-          "lon": center[1],
-          "lat": center[0]
-      },
-      "end_address": {
-          "location_id": "nicky's",
-          "lon": center[1],
-          "lat": center[0]
-      },
-      "earliest_start":13*60*60,
-      "latest_end":17*60*60
-
-    }
-
-request = {
-    "vehicles" : [getVehicle(id) for id in range(1,5)],
-    "vehicle_types": {
-                "type_id":"camper",
-                "profile": "car"
-            },
-    "services": [ toGraphHopperService(item) for item in data["features"]],
-
-}
+map_file = open("index2.html", "w")
+map_file.write(m.render())
+map_file.close()
 '''
+print(outext)
+outext_file = open("out.txt", "w")
+outext_file.write(outext)
+outext_file.close()
+
+
 
 
 
