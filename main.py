@@ -60,7 +60,10 @@ done = [18768, # Peace Well Dore
     34468, # Bar Dyke
     18517, # Ecclesfield - Ancient Cross - Inaccesible due to COVID-19
     28647, # Bath Spring - Holy Well  - Inaccesible due to COVID-19
-
+    10278, # Ecclesall Woods - Rock Art in England in Yorkshire (South)
+    307,   # Stoke Flat - Stone Circle in England in Derbyshire
+    18441, # Eyam Boundary Stone - Marker Stone in England in Derbyshire
+    7747,  # St Lawrence (Eyam) - Ancient Cross in England in Derbyshire
 
     ]
 

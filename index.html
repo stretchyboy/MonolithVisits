@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<head>
+<head>    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-
+    
         <script>
             L_NO_TOUCH = false;
             L_DISABLE_3D = false;
         </script>
-
+    
     <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -19,11 +19,11 @@
     <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
     <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
     <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
-
+    
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_a8e82bc78021412ebed6af209a36d3c8 {
+                #map_50e6ebbb0a944bf18b355765baa3f51f {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -31,11 +31,11 @@
                     top: 0.0%;
                 }
             </style>
-
-
+        
+    
                     <style>
                         .foliumtooltip {
-
+                            
                         }
                        .foliumtooltip table{
                             margin: auto;
@@ -47,8 +47,8 @@
                             padding: 2px; padding-right: 8px;
                         }
                     </style>
-
-
+            
+    
                     <style>
                         .foliumpopup {
                             margin: auto;
@@ -63,17 +63,17 @@
                             padding: 2px; padding-right: 8px;
                         }
                     </style>
-
+            
 </head>
-<body>
-
-            <div class="folium-map" id="map_a8e82bc78021412ebed6af209a36d3c8" ></div>
-
+<body>    
+    
+            <div class="folium-map" id="map_50e6ebbb0a944bf18b355765baa3f51f" ></div>
+        
 </body>
-<script>
-
-            var map_a8e82bc78021412ebed6af209a36d3c8 = L.map(
-                "map_a8e82bc78021412ebed6af209a36d3c8",
+<script>    
+    
+            var map_50e6ebbb0a944bf18b355765baa3f51f = L.map(
+                "map_50e6ebbb0a944bf18b355765baa3f51f",
                 {
                     center: [53.362062, -1.50366],
                     crs: L.CRS.EPSG3857,
@@ -83,142 +83,142 @@
                     title: "Our Map",
                 }
             );
-            L.control.scale().addTo(map_a8e82bc78021412ebed6af209a36d3c8);
+            L.control.scale().addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
 
+            
 
-
-
-
-            var tile_layer_f693bb4552044624bc6b766dd11e6d9d = L.tileLayer(
+        
+    
+            var tile_layer_0e09f35896434d72822ecfac733831ab = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
-
-
-            var poly_line_b49655e1c505445a90d3ee39c0bdb64d = L.polyline(
-                [[53.362062, -1.50366], [53.343798, -1.51181], [53.276742, -1.582908], [53.276475, -1.58381], [53.251289, -1.594381], [53.247915, -1.590831], [53.362062, -1.50366]],
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+        
+    
+            var poly_line_8786fd4fed5048a2a3df9c9fd7b8bb51 = L.polyline(
+                [[53.362062, -1.50366], [53.276742, -1.582908], [53.276475, -1.58381], [53.251289, -1.594381], [53.247915, -1.590831], [53.239856, -1.599898], [53.362062, -1.50366]],
                 {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+        
+    
+        var popup_7cda022031424f2d8f8da13db766edbe = L.popup({"maxWidth": "100%"});
 
+        
+            var html_4777f133bc7c468fa2deb528d6f1627c = $(`<div id="html_4777f133bc7c468fa2deb528d6f1627c" style="width: 100.0%; height: 100.0%;">Trip: 1  Dist :21.9 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.276741919522%2C-1.5829079415444%7C53.276475405811%2C-1.5838103225232%7C53.2512891563%2C-1.59438112932%7C53.247915204234%2C-1.5908312488946%7C53.239855987813%2C-1.5998982601819&waypoint_place_ids=Barbrook+cairn%7CBarbrook+1%7CThree+Men+of+Gardoms%7CGardoms+Edge+Ringcairn%7CDobb+Edge+Cup+and+Ring">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.276742,-1.582908&point=53.276475,-1.58381&point=53.251289,-1.594381&point=53.247915,-1.590831&point=53.239856,-1.599898&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
+            popup_7cda022031424f2d8f8da13db766edbe.setContent(html_4777f133bc7c468fa2deb528d6f1627c);
+        
 
-        var popup_27034a6de6764361b69e0890372ca099 = L.popup({"maxWidth": "100%"});
-
-
-            var html_0d7ad3ba6aac4e8e80c53c22d0a09856 = $(`<div id="html_0d7ad3ba6aac4e8e80c53c22d0a09856" style="width: 100.0%; height: 100.0%;">Trip: 1  Dist :20.3 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.343798227449%2C-1.5118099836154%7C53.276741919522%2C-1.5829079415444%7C53.276475405811%2C-1.5838103225232%7C53.2512891563%2C-1.59438112932%7C53.247915204234%2C-1.5908312488946&waypoint_place_ids=Ecclesall+Woods%7CBarbrook+cairn%7CBarbrook+1%7CThree+Men+of+Gardoms%7CGardoms+Edge+Ringcairn">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.343798,-1.51181&point=53.276742,-1.582908&point=53.276475,-1.58381&point=53.251289,-1.594381&point=53.247915,-1.590831&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
-            popup_27034a6de6764361b69e0890372ca099.setContent(html_0d7ad3ba6aac4e8e80c53c22d0a09856);
-
-
-        poly_line_b49655e1c505445a90d3ee39c0bdb64d.bindPopup(popup_27034a6de6764361b69e0890372ca099)
+        poly_line_8786fd4fed5048a2a3df9c9fd7b8bb51.bindPopup(popup_7cda022031424f2d8f8da13db766edbe)
         ;
 
-
-
-
-            var poly_line_b25fbc0b9f9d445295065178d27e4614 = L.polyline(
-                [[53.362062, -1.50366], [53.314534, -1.621715], [53.287495, -1.627054], [53.278701, -1.662524], [53.284128, -1.674481], [53.300096, -1.69313], [53.362062, -1.50366]],
+        
+    
+    
+            var poly_line_9c2b7d56d326407ea496da18160b0a0f = L.polyline(
+                [[53.362062, -1.50366], [53.314534, -1.621715], [53.329923, -1.657616], [53.300096, -1.69313], [53.208973, -1.640163], [53.362062, -1.50366]],
                 {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+        
+    
+        var popup_691acb1eef7f4495832d85ca03e5f808 = L.popup({"maxWidth": "100%"});
 
+        
+            var html_7ac00125683e4679b666c09cf438e00a = $(`<div id="html_7ac00125683e4679b666c09cf438e00a" style="width: 100.0%; height: 100.0%;">Trip: 2  Dist :36.1 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.314534195671%2C-1.6217154262941%7C53.329923371273%2C-1.6576158289276%7C53.300096455374%2C-1.6931302923269%7C53.2089726271%2C-1.64016337944&waypoint_place_ids=Lawrence+Field%7CHealing+Spring%7CDerwic+Well%7CCalton+Pasture+II">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.314534,-1.621715&point=53.329923,-1.657616&point=53.300096,-1.69313&point=53.208973,-1.640163&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
+            popup_691acb1eef7f4495832d85ca03e5f808.setContent(html_7ac00125683e4679b666c09cf438e00a);
+        
 
-        var popup_4277a34a555a4e13b1f66dfdfffaa343 = L.popup({"maxWidth": "100%"});
-
-
-            var html_072fc87054e74d2b8049fffa629ca316 = $(`<div id="html_072fc87054e74d2b8049fffa629ca316" style="width: 100.0%; height: 100.0%;">Trip: 2  Dist :29.5 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.314534195671%2C-1.6217154262941%7C53.287494821703%2C-1.6270542312594%7C53.278701489587%2C-1.6625241628705%7C53.284127964787%2C-1.6744807305779%7C53.300096455374%2C-1.6931302923269&waypoint_place_ids=Lawrence+Field%7CStoke+Flat%7CEyam+Boundary+Stone%7CSt+Lawrence+%28Eyam%29%7CDerwic+Well">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.314534,-1.621715&point=53.287495,-1.627054&point=53.278701,-1.662524&point=53.284128,-1.674481&point=53.300096,-1.69313&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
-            popup_4277a34a555a4e13b1f66dfdfffaa343.setContent(html_072fc87054e74d2b8049fffa629ca316);
-
-
-        poly_line_b25fbc0b9f9d445295065178d27e4614.bindPopup(popup_4277a34a555a4e13b1f66dfdfffaa343)
+        poly_line_9c2b7d56d326407ea496da18160b0a0f.bindPopup(popup_691acb1eef7f4495832d85ca03e5f808)
         ;
 
-
-
-
-            var poly_line_a478c51f1e604cd6b738e5f1566a1659 = L.polyline(
+        
+    
+    
+            var poly_line_12d066bfefcc4ac1a66080ddfbc0eaeb = L.polyline(
                 [[53.362062, -1.50366], [53.452085, -1.406667], [53.567214, -1.571753], [53.362062, -1.50366]],
                 {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+        
+    
+        var popup_eda2af35f61647208aac0c37b5505af5 = L.popup({"maxWidth": "100%"});
 
+        
+            var html_9055d70f1e5a4f709bbbb7f56d3d47ea = $(`<div id="html_9055d70f1e5a4f709bbbb7f56d3d47ea" style="width: 100.0%; height: 100.0%;">Trip: 3  Dist :37.9 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.4520852817%2C-1.40666719846%7C53.567213832128%2C-1.5717527603126&waypoint_place_ids=Scholes+Wood%7CAll+Saints+%28Cawthorne%29">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.452085,-1.406667&point=53.567214,-1.571753&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
+            popup_eda2af35f61647208aac0c37b5505af5.setContent(html_9055d70f1e5a4f709bbbb7f56d3d47ea);
+        
 
-        var popup_b0732b3363c64b218cf231557ecef9b3 = L.popup({"maxWidth": "100%"});
-
-
-            var html_fd5d27b9f6b7460fa2434bf8d8d5eb48 = $(`<div id="html_fd5d27b9f6b7460fa2434bf8d8d5eb48" style="width: 100.0%; height: 100.0%;">Trip: 3  Dist :37.9 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.4520852817%2C-1.40666719846%7C53.567213832128%2C-1.5717527603126&waypoint_place_ids=Scholes+Wood%7CAll+Saints+%28Cawthorne%29">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.452085,-1.406667&point=53.567214,-1.571753&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
-            popup_b0732b3363c64b218cf231557ecef9b3.setContent(html_fd5d27b9f6b7460fa2434bf8d8d5eb48);
-
-
-        poly_line_a478c51f1e604cd6b738e5f1566a1659.bindPopup(popup_b0732b3363c64b218cf231557ecef9b3)
+        poly_line_12d066bfefcc4ac1a66080ddfbc0eaeb.bindPopup(popup_eda2af35f61647208aac0c37b5505af5)
         ;
 
-
-
-
-            var poly_line_8178e12416f748cb839f327c97f099fa = L.polyline(
-                [[53.362062, -1.50366], [53.239856, -1.599898], [53.208973, -1.640163], [53.156011, -1.531887], [53.165688, -1.480925], [53.362062, -1.50366]],
+        
+    
+    
+            var poly_line_c1d504bff152499ba36b2eb44a4fb7cb = L.polyline(
+                [[53.362062, -1.50366], [53.491692, -1.648779], [53.362062, -1.50366]],
                 {"bubblingMouseEvents": true, "color": "purple", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "purple", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+        
+    
+        var popup_6b972847eb934a36af038614906e7fde = L.popup({"maxWidth": "100%"});
 
+        
+            var html_6b16481fa15d418e9a73dbaaee0fb880 = $(`<div id="html_6b16481fa15d418e9a73dbaaee0fb880" style="width: 100.0%; height: 100.0%;">Trip: 4  Dist :26.8 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.4916923124%2C-1.6487791746222&waypoint_place_ids=St+James%27s+Well+%28Midhopestones%29">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.491692,-1.648779&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
+            popup_6b972847eb934a36af038614906e7fde.setContent(html_6b16481fa15d418e9a73dbaaee0fb880);
+        
 
-        var popup_1c4dd42e20c8438aa532a255a8114d61 = L.popup({"maxWidth": "100%"});
-
-
-            var html_f19ba00311a14974bb597b4e5221bcfd = $(`<div id="html_f19ba00311a14974bb597b4e5221bcfd" style="width: 100.0%; height: 100.0%;">Trip: 4  Dist :39.7 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.239855987813%2C-1.5998982601819%7C53.2089726271%2C-1.64016337944%7C53.1560112572%2C-1.53188715034%7C53.1656880998%2C-1.48092517563&waypoint_place_ids=Dobb+Edge+Cup+and+Ring%7CCalton+Pasture+II%7CCuckoo+Stone+%28Derbyshire%29%7CAshover+School">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.239856,-1.599898&point=53.208973,-1.640163&point=53.156011,-1.531887&point=53.165688,-1.480925&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
-            popup_1c4dd42e20c8438aa532a255a8114d61.setContent(html_f19ba00311a14974bb597b4e5221bcfd);
-
-
-        poly_line_8178e12416f748cb839f327c97f099fa.bindPopup(popup_1c4dd42e20c8438aa532a255a8114d61)
+        poly_line_c1d504bff152499ba36b2eb44a4fb7cb.bindPopup(popup_6b972847eb934a36af038614906e7fde)
         ;
 
-
-
-
-            var poly_line_23a73af4ea1349be941237ccf3f9ea48 = L.polyline(
-                [[53.362062, -1.50366], [53.329923, -1.657616], [53.491692, -1.648779], [53.362062, -1.50366]],
+        
+    
+    
+            var poly_line_01e89ecb6c8c4ef29ba6b525de84fa4d = L.polyline(
+                [[53.362062, -1.50366], [53.165688, -1.480925], [53.156011, -1.531887], [53.362062, -1.50366]],
                 {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "orange", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 1.0, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+        
+    
+        var popup_367aa20f6a9d4fef92b09d8427dd8a80 = L.popup({"maxWidth": "100%"});
 
+        
+            var html_7a2ab01f857b4aa6bd1a0885da6070a6 = $(`<div id="html_7a2ab01f857b4aa6bd1a0885da6070a6" style="width: 100.0%; height: 100.0%;">Trip: 5  Dist :31.6 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.1656880998%2C-1.48092517563%7C53.1560112572%2C-1.53188715034&waypoint_place_ids=Ashover+School%7CCuckoo+Stone+%28Derbyshire%29">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.165688,-1.480925&point=53.156011,-1.531887&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
+            popup_367aa20f6a9d4fef92b09d8427dd8a80.setContent(html_7a2ab01f857b4aa6bd1a0885da6070a6);
+        
 
-        var popup_6f1e8a9fc2fd49dd8d2a7d311d24f798 = L.popup({"maxWidth": "100%"});
-
-
-            var html_6b2de5acf4fc45e1bb46aeffa1c17a80 = $(`<div id="html_6b2de5acf4fc45e1bb46aeffa1c17a80" style="width: 100.0%; height: 100.0%;">Trip: 5  Dist :35.4 Miles <a target="_blank" href="https://www.google.com/maps/dir/?api=1&origin=53.362062%2C-1.50366&destination=53.362062%2C-1.50366&waypoints=53.329923371273%2C-1.6576158289276%7C53.4916923124%2C-1.6487791746222&waypoint_place_ids=Healing+Spring%7CSt+James%27s+Well+%28Midhopestones%29">Google</a> <a target="_blank" href="https://graphhopper.com/maps/?locale=en-GB&vehicle=small_truck&weighting=fastest&turn_costs=true&use_miles=false&layer=OpenStreetMap&point=53.362062,-1.50366&point=53.329923,-1.657616&point=53.491692,-1.648779&point=53.362062,-1.50366">Graph Hopper</a></div>`)[0];
-            popup_6f1e8a9fc2fd49dd8d2a7d311d24f798.setContent(html_6b2de5acf4fc45e1bb46aeffa1c17a80);
-
-
-        poly_line_23a73af4ea1349be941237ccf3f9ea48.bindPopup(popup_6f1e8a9fc2fd49dd8d2a7d311d24f798)
+        poly_line_01e89ecb6c8c4ef29ba6b525de84fa4d.bindPopup(popup_367aa20f6a9d4fef92b09d8427dd8a80)
         ;
 
-
-
-
-        function geo_json_b31a654672054805b0b86850c06a8e13_styler(feature) {
+        
+    
+    
+        function geo_json_2584832eff384217864806f692a8e6be_styler(feature) {
             switch(feature.properties.sid) {
                 default:
                     return {"fillColor": "#ff0000"};
             }
         }
-        function geo_json_b31a654672054805b0b86850c06a8e13_onEachFeature(feature, layer) {
+        function geo_json_2584832eff384217864806f692a8e6be_onEachFeature(feature, layer) {
             layer.on({
                 click: function(e) {
-                    //map_a8e82bc78021412ebed6af209a36d3c8.fitBounds(e.target.getBounds());
+                    //map_50e6ebbb0a944bf18b355765baa3f51f.fitBounds(e.target.getBounds());
                 }
             });
         };
-        var geo_json_b31a654672054805b0b86850c06a8e13 = L.geoJson(null, {
-                onEachFeature: geo_json_b31a654672054805b0b86850c06a8e13_onEachFeature,
+        var geo_json_2584832eff384217864806f692a8e6be = L.geoJson(null, {
+                onEachFeature: geo_json_2584832eff384217864806f692a8e6be_onEachFeature,
+            
+                style: geo_json_2584832eff384217864806f692a8e6be_styler,
+        }).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
 
-                style: geo_json_b31a654672054805b0b86850c06a8e13_styler,
-        }).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
-
-        function geo_json_b31a654672054805b0b86850c06a8e13_add (data) {
-            geo_json_b31a654672054805b0b86850c06a8e13.addData(data);
+        function geo_json_2584832eff384217864806f692a8e6be_add (data) {
+            geo_json_2584832eff384217864806f692a8e6be.addData(data);
         }
-            geo_json_b31a654672054805b0b86850c06a8e13_add({"features": [{"geometry": {"coordinates": [-1.5118099836154, 53.343798227449], "type": "Point"}, "lat": 53.343798227449, "lng": -1.5118099836154, "properties": {"acc": "4", "amb": "4", "cond": "4", "dist": 1.3814639034775782, "group": 1, "icon": "tr29", "sid": "10278", "sitetype": "Rock Art", "title": "Ecclesall Woods", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=10278\" target=\"_blank\"\u003eEcclesall Woods\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5829079415444, 53.276741919522], "type": "Point"}, "lat": 53.276741919522, "lng": -1.5829079415444, "properties": {"acc": "4", "amb": "3", "cond": "4", "dist": 8.028213554070733, "group": 1, "icon": "tr7", "localdist": 6.7351229988482615, "sid": "16887", "sitetype": "Cairn", "title": "Barbrook cairn", "tripdist": 8.116586902325839, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=16887\" target=\"_blank\"\u003eBarbrook cairn\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5838103225232, 53.276475405811], "type": "Point"}, "lat": 53.276475405811, "lng": -1.5838103225232, "properties": {"acc": "4", "amb": "5", "cond": "4", "dist": 8.083873228384391, "group": 1, "icon": "tr23", "localdist": 0.06468160276501579, "sid": "297", "sitetype": "Stone Circle", "title": "Barbrook 1", "tripdist": 8.181268505090854, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=297\" target=\"_blank\"\u003eBarbrook 1\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.59438112932, 53.2512891563], "type": "Point"}, "lat": 53.2512891563, "lng": -1.59438112932, "properties": {"acc": "4", "amb": "3", "cond": "3", "dist": 9.875276246428585, "group": 1, "icon": "tr18", "localdist": 1.8868718542646927, "sid": "2257", "sitetype": "Round Barrow(s)", "title": "Three Men of Gardoms", "tripdist": 10.068140359355546, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=2257\" target=\"_blank\"\u003eThree Men of Gardoms\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5908312488946, 53.247915204234], "type": "Point"}, "lat": 53.247915204234, "lng": -1.5908312488946, "properties": {"acc": "4", "amb": "2", "cond": "3", "dist": 9.907988812247282, "group": 1, "icon": "tr28", "localdist": 0.33751136598402803, "sid": "324", "sitetype": "Ring Cairn", "title": "Gardoms Edge Ringcairn", "tripdist": 10.405651725339574, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=324\" target=\"_blank\"\u003eGardoms Edge Ringcairn\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6217154262941, 53.314534195671], "type": "Point"}, "lat": 53.314534195671, "lng": -1.6217154262941, "properties": {"acc": "4", "amb": "1", "cond": "2", "dist": 8.751815164877293, "group": 2, "icon": "tr23", "localdist": 4.759233127601292, "sid": "568", "sitetype": "Stone Circle", "title": "Lawrence Field", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=568\" target=\"_blank\"\u003eLawrence Field\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6270542312594, 53.287494821703], "type": "Point"}, "lat": 53.287494821703, "lng": -1.6270542312594, "properties": {"acc": "4", "amb": "4", "cond": "4", "dist": 9.922883485641169, "group": 2, "icon": "tr23", "localdist": 1.905232398936362, "sid": "307", "sitetype": "Stone Circle", "title": "Stoke Flat", "tripdist": 10.657047563813656, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=307\" target=\"_blank\"\u003eStoke Flat\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6625241628705, 53.278701489587], "type": "Point"}, "lat": 53.278701489587, "lng": -1.6625241628705, "properties": {"acc": "4", "amb": "5", "cond": "4", "dist": 12.343657634956493, "group": 2, "icon": "tr67", "localdist": 2.5117715705167325, "sid": "18441", "sitetype": "Marker Stone", "title": "Eyam Boundary Stone", "tripdist": 13.168819134330388, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18441\" target=\"_blank\"\u003eEyam Boundary Stone\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6744807305779, 53.284127964787], "type": "Point"}, "lat": 53.284127964787, "lng": -1.6744807305779, "properties": {"acc": "4", "amb": "3", "cond": "4", "dist": 12.914725276610147, "group": 2, "icon": "tr46", "localdist": 0.9031379306410956, "sid": "7747", "sitetype": "Ancient Cross", "title": "St Lawrence (Eyam)", "tripdist": 14.071957064971484, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=7747\" target=\"_blank\"\u003eSt Lawrence (Eyam)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6931302923269, 53.300096455374], "type": "Point"}, "lat": 53.300096455374, "lng": -1.6931302923269, "properties": {"acc": "4", "amb": "4", "cond": "3", "dist": 13.705105074935116, "group": 2, "icon": "tr45", "localdist": 1.6914257758528157, "sid": "18392", "sitetype": "Holy Well or Sacred Spring", "title": "Derwic Well", "tripdist": 15.763382840824299, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18392\" target=\"_blank\"\u003eDerwic Well\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.40666719846, 53.4520852817], "type": "Point"}, "lat": 53.4520852817, "lng": -1.40666719846, "properties": {"acc": "4", "amb": "3", "cond": "3", "dist": 9.119311380044946, "group": 3, "icon": "tr13", "localdist": 21.75937640561268, "sid": "5168", "sitetype": "Hillfort", "title": "Scholes Wood", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=5168\" target=\"_blank\"\u003eScholes Wood\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5717527603126, 53.567213832128], "type": "Point"}, "lat": 53.567213832128, "lng": -1.5717527603126, "properties": {"acc": "5", "amb": "3", "cond": "3", "dist": 14.9370306587039, "group": 3, "icon": "tr46", "localdist": 13.857578062665992, "sid": "16751", "sitetype": "Ancient Cross", "title": "All Saints (Cawthorne)", "tripdist": 22.976889442710938, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=16751\" target=\"_blank\"\u003eAll Saints (Cawthorne)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5998982601819, 53.239855987813], "type": "Point"}, "lat": 53.239855987813, "lng": -1.5998982601819, "properties": {"acc": "4", "amb": "0", "cond": "3", "dist": 10.729664970427647, "group": 4, "icon": "tr29", "localdist": 22.71742283412869, "sid": "35104", "sitetype": "Rock Art", "title": "Dobb Edge Cup and Ring", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=35104\" target=\"_blank\"\u003eDobb Edge Cup and Ring\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.64016337944, 53.2089726271], "type": "Point"}, "lat": 53.2089726271, "lng": -1.64016337944, "properties": {"acc": "4", "amb": "4", "cond": "3", "dist": 14.142603464658324, "group": 4, "icon": "tr18", "localdist": 3.494796327756308, "sid": "14518", "sitetype": "Round Barrow(s)", "title": "Calton Pasture II", "tripdist": 14.224461298183956, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=14518\" target=\"_blank\"\u003eCalton Pasture II\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.53188715034, 53.1560112572], "type": "Point"}, "lat": 53.1560112572, "lng": -1.53188715034, "properties": {"acc": "4", "amb": "0", "cond": "4", "dist": 14.379106664636687, "group": 4, "icon": "tr36", "localdist": 8.291908349794669, "sid": "6927", "sitetype": "Natural Stone / Erratic / Other Natural Feature", "title": "Cuckoo Stone (Derbyshire)", "tripdist": 22.516369647978625, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=6927\" target=\"_blank\"\u003eCuckoo Stone (Derbyshire)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.48092517563, 53.1656880998], "type": "Point"}, "lat": 53.1656880998, "lng": -1.48092517563, "properties": {"acc": "4", "amb": "2", "cond": "4", "dist": 13.66830174995585, "group": 4, "icon": "tr29", "localdist": 3.5648631790677507, "sid": "5451", "sitetype": "Rock Art", "title": "Ashover School", "tripdist": 26.081232827046374, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=5451\" target=\"_blank\"\u003eAshover School\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6576158289276, 53.329923371273], "type": "Point"}, "lat": 53.329923371273, "lng": -1.6576158289276, "properties": {"acc": "4", "amb": "4", "cond": "3", "dist": 10.80892597867988, "group": 5, "icon": "tr45", "localdist": 16.623521010400406, "sid": "18478", "sitetype": "Holy Well or Sacred Spring", "title": "Healing Spring", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18478\" target=\"_blank\"\u003eHealing Spring\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6487791746222, 53.4916923124], "type": "Point"}, "lat": 53.4916923124, "lng": -1.6487791746222, "properties": {"acc": "4", "amb": "5", "cond": "4", "dist": 13.407394369301231, "group": 5, "icon": "tr45", "localdist": 11.201515124938407, "sid": "18665", "sitetype": "Holy Well or Sacred Spring", "title": "St James\u0027s Well (Midhopestones)", "tripdist": 22.010441103618287, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18665\" target=\"_blank\"\u003eSt James\u0027s Well (Midhopestones)\u003c/a\u003e"}, "type": "Feature"}], "type": "FeatureCollection"});
-
-
-    geo_json_b31a654672054805b0b86850c06a8e13.bindTooltip(
+            geo_json_2584832eff384217864806f692a8e6be_add({"features": [{"geometry": {"coordinates": [-1.5829079415444, 53.276741919522], "type": "Point"}, "lat": 53.276741919522, "lng": -1.5829079415444, "properties": {"acc": "4", "amb": "3", "cond": "4", "dist": 8.028213554070733, "group": 1, "icon": "tr7", "sid": "16887", "sitetype": "Cairn", "title": "Barbrook cairn", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=16887\" target=\"_blank\"\u003eBarbrook cairn\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5838103225232, 53.276475405811], "type": "Point"}, "lat": 53.276475405811, "lng": -1.5838103225232, "properties": {"acc": "4", "amb": "5", "cond": "4", "dist": 8.083873228384391, "group": 1, "icon": "tr23", "localdist": 0.06468160276501579, "sid": "297", "sitetype": "Stone Circle", "title": "Barbrook 1", "tripdist": 8.092895156835748, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=297\" target=\"_blank\"\u003eBarbrook 1\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.59438112932, 53.2512891563], "type": "Point"}, "lat": 53.2512891563, "lng": -1.59438112932, "properties": {"acc": "4", "amb": "3", "cond": "3", "dist": 9.875276246428585, "group": 1, "icon": "tr18", "localdist": 1.8868718542646927, "sid": "2257", "sitetype": "Round Barrow(s)", "title": "Three Men of Gardoms", "tripdist": 9.97976701110044, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=2257\" target=\"_blank\"\u003eThree Men of Gardoms\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5908312488946, 53.247915204234], "type": "Point"}, "lat": 53.247915204234, "lng": -1.5908312488946, "properties": {"acc": "4", "amb": "2", "cond": "3", "dist": 9.907988812247282, "group": 1, "icon": "tr28", "localdist": 0.33751136598402803, "sid": "324", "sitetype": "Ring Cairn", "title": "Gardoms Edge Ringcairn", "tripdist": 10.317278377084468, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=324\" target=\"_blank\"\u003eGardoms Edge Ringcairn\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5998982601819, 53.239855987813], "type": "Point"}, "lat": 53.239855987813, "lng": -1.5998982601819, "properties": {"acc": "4", "amb": "0", "cond": "3", "dist": 10.729664970427647, "group": 1, "icon": "tr29", "localdist": 0.8358385655131673, "sid": "35104", "sitetype": "Rock Art", "title": "Dobb Edge Cup and Ring", "tripdist": 11.153116942597636, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=35104\" target=\"_blank\"\u003eDobb Edge Cup and Ring\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6217154262941, 53.314534195671], "type": "Point"}, "lat": 53.314534195671, "lng": -1.6217154262941, "properties": {"acc": "4", "amb": "1", "cond": "2", "dist": 8.751815164877293, "group": 2, "icon": "tr23", "localdist": 5.071561225878544, "sid": "568", "sitetype": "Stone Circle", "title": "Lawrence Field", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=568\" target=\"_blank\"\u003eLawrence Field\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6576158289276, 53.329923371273], "type": "Point"}, "lat": 53.329923371273, "lng": -1.6576158289276, "properties": {"acc": "4", "amb": "4", "cond": "3", "dist": 10.80892597867988, "group": 2, "icon": "tr45", "localdist": 2.6863684481484267, "sid": "18478", "sitetype": "Holy Well or Sacred Spring", "title": "Healing Spring", "tripdist": 11.43818361302572, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18478\" target=\"_blank\"\u003eHealing Spring\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6931302923269, 53.300096455374], "type": "Point"}, "lat": 53.300096455374, "lng": -1.6931302923269, "properties": {"acc": "4", "amb": "4", "cond": "3", "dist": 13.705105074935116, "group": 2, "icon": "tr45", "localdist": 3.1948770798072426, "sid": "18392", "sitetype": "Holy Well or Sacred Spring", "title": "Derwic Well", "tripdist": 14.633060692832963, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18392\" target=\"_blank\"\u003eDerwic Well\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.64016337944, 53.2089726271], "type": "Point"}, "lat": 53.2089726271, "lng": -1.64016337944, "properties": {"acc": "4", "amb": "4", "cond": "3", "dist": 14.142603464658324, "group": 2, "icon": "tr18", "localdist": 7.275984008151052, "sid": "14518", "sitetype": "Round Barrow(s)", "title": "Calton Pasture II", "tripdist": 21.909044700984015, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=14518\" target=\"_blank\"\u003eCalton Pasture II\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.40666719846, 53.4520852817], "type": "Point"}, "lat": 53.4520852817, "lng": -1.40666719846, "properties": {"acc": "4", "amb": "3", "cond": "3", "dist": 9.119311380044946, "group": 3, "icon": "tr13", "localdist": 23.237235591293082, "sid": "5168", "sitetype": "Hillfort", "title": "Scholes Wood", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=5168\" target=\"_blank\"\u003eScholes Wood\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.5717527603126, 53.567213832128], "type": "Point"}, "lat": 53.567213832128, "lng": -1.5717527603126, "properties": {"acc": "5", "amb": "3", "cond": "3", "dist": 14.9370306587039, "group": 3, "icon": "tr46", "localdist": 13.857578062665992, "sid": "16751", "sitetype": "Ancient Cross", "title": "All Saints (Cawthorne)", "tripdist": 22.976889442710938, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=16751\" target=\"_blank\"\u003eAll Saints (Cawthorne)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.6487791746222, 53.4916923124], "type": "Point"}, "lat": 53.4916923124, "lng": -1.6487791746222, "properties": {"acc": "4", "amb": "5", "cond": "4", "dist": 13.407394369301231, "group": 4, "icon": "tr45", "localdist": 7.4348124573491265, "sid": "18665", "sitetype": "Holy Well or Sacred Spring", "title": "St James\u0027s Well (Midhopestones)", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=18665\" target=\"_blank\"\u003eSt James\u0027s Well (Midhopestones)\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.48092517563, 53.1656880998], "type": "Point"}, "lat": 53.1656880998, "lng": -1.48092517563, "properties": {"acc": "4", "amb": "2", "cond": "4", "dist": 13.66830174995585, "group": 5, "icon": "tr29", "localdist": 25.320582251420575, "sid": "5451", "sitetype": "Rock Art", "title": "Ashover School", "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=5451\" target=\"_blank\"\u003eAshover School\u003c/a\u003e"}, "type": "Feature"}, {"geometry": {"coordinates": [-1.53188715034, 53.1560112572], "type": "Point"}, "lat": 53.1560112572, "lng": -1.53188715034, "properties": {"acc": "4", "amb": "0", "cond": "4", "dist": 14.379106664636687, "group": 5, "icon": "tr36", "localdist": 3.5648631790677507, "sid": "6927", "sitetype": "Natural Stone / Erratic / Other Natural Feature", "title": "Cuckoo Stone (Derbyshire)", "tripdist": 17.2331649290236, "url": "\u003ca href=\"http://www.megalithic.co.uk/article.php?op=savenewvisit\u0026sid=6927\" target=\"_blank\"\u003eCuckoo Stone (Derbyshire)\u003c/a\u003e"}, "type": "Feature"}], "type": "FeatureCollection"});
+        
+    
+    geo_json_2584832eff384217864806f692a8e6be.bindTooltip(
     function(layer){
     let div = L.DomUtil.create('div');
-
+    
     let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
     let fields = ["url", "dist", "group", "sitetype", "cond", "amb", "acc"];
     let aliases = ["Site", "Miles", "Trip", "Type", "Condition", "Ambience", "Access"];
@@ -228,22 +228,22 @@
         (v,i)=>
         `<tr>
             <th>${aliases[i]}</th>
-
+            
             <td>${handleObject(layer.feature.properties[v])}</td>
         </tr>`).join(''))
     +'</table>';
     div.innerHTML=table;
-
+    
     return div
     }
     ,{"className": "foliumtooltip", "click": null, "show": true, "sticky": true});
-
-
-    let name_getter = 'geo_json_b31a654672054805b0b86850c06a8e13';
-    geo_json_b31a654672054805b0b86850c06a8e13.bindPopup(
+                     
+    
+    let name_getter = 'geo_json_2584832eff384217864806f692a8e6be';
+    geo_json_2584832eff384217864806f692a8e6be.bindPopup(
     function(layer){
     let div = L.DomUtil.create('div');
-
+    
     let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
     let fields = ["url", "dist", "group", "sitetype", "cond", "amb", "acc"];
     let aliases = ["Site", "Miles", "Trip", "Type", "Condition", "Ambience", "Access"];
@@ -253,37 +253,37 @@
         (v,i)=>
         `<tr>
             <th>${aliases[i].toLocaleString()}</th>
-
+            
             <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
         </tr>`).join(''))
     +'</table>';
     div.innerHTML=table;
-
+    
     return div
     }
     ,{"className": "foliumpopup", "click": null, "show": true});
-
-
-            map_a8e82bc78021412ebed6af209a36d3c8.fitBounds(
+                     
+    
+            map_50e6ebbb0a944bf18b355765baa3f51f.fitBounds(
                 [[53.156011, -1.6931302923269], [53.567214, -1.406667]],
                 {"padding": [10, 10]}
             );
-
-
-            var layer_control_689ce09261064a64b8e28fcea462780b = {
+        
+    
+            var layer_control_69495f46408947c883c053afaf896bc7 = {
                 base_layers : {
-                    "openstreetmap" : tile_layer_f693bb4552044624bc6b766dd11e6d9d,
-                    "Stamen Terrain" : macro_element_c0b4b63df5f14b739dc1d2b77406cbc1,
+                    "openstreetmap" : tile_layer_0e09f35896434d72822ecfac733831ab,
+                    "Stamen Terrain" : macro_element_225a513536dc486baa3592798af07d80,
                 },
                 overlays :  {
-                    "Sites" : geo_json_b31a654672054805b0b86850c06a8e13,
+                    "Sites" : geo_json_2584832eff384217864806f692a8e6be,
                 },
             };
             L.control.layers(
-                layer_control_689ce09261064a64b8e28fcea462780b.base_layers,
-                layer_control_689ce09261064a64b8e28fcea462780b.overlays,
+                layer_control_69495f46408947c883c053afaf896bc7.base_layers,
+                layer_control_69495f46408947c883c053afaf896bc7.overlays,
                 {"autoZIndex": true, "collapsed": true, "position": "topright"}
-            ).addTo(map_a8e82bc78021412ebed6af209a36d3c8);
-            macro_element_c0b4b63df5f14b739dc1d2b77406cbc1.remove();
-
+            ).addTo(map_50e6ebbb0a944bf18b355765baa3f51f);
+            macro_element_225a513536dc486baa3592798af07d80.remove();
+        
 </script>
